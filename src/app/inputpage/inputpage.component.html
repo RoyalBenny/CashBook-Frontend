@@ -1,0 +1,20 @@
+<div class="container" >
+    <br>
+    <h1>Input Your Transaction</h1>
+    <div class="row" style="height: 70px;">
+        <!-- <div class="col-12 col-md-6" style="display:inline-flex; margin-top: 10px;"> -->
+        <div class="col-12 col-md-4" style=" margin-top: 10px;">
+            <ejs-calendar  (change)='onChange($event)' [max]='maxDate'></ejs-calendar>
+        </div>
+        <div class="col-12 col-md-6">
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="entry.amount" placeholder="Enter Amount" aria-label="Enter the amount" style="font-size:x-large; height: 100px;">
+            <input type="text" class="form-control" [(ngModel)]="entry.description" placeholder="Description" aria-label="Enter the description" style=" margin-top: 10px; height: 50px;">
+            <br>
+            <button class="btn btn-success" type="button" style="width: 100px; margin-right: 10px; height: 50px; font-size: larger;" (click)="onInBtn()">IN</button>
+            <button class="btn btn-danger" type="button"style="width: 100px; height:50px; font-size:larger" (click)="onOutBtn()">OUT</button>
+        </div>
+    </div>
+    
+ 
+</div>

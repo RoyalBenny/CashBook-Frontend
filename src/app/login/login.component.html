@@ -1,0 +1,50 @@
+
+<div class="container" >
+    <div class="row logo-row" style="padding-top:3vh;">
+        <!-- <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center">
+            <h1>Login to Cashbook!</h1>
+        </div> -->
+    </div>
+    <div class="row d-flex justify-content-center" style="padding-top:3vh;">
+
+        <div class="col-12 col-md-5 col-lg-6">
+            <h3>Login to Cashbook!</h3>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <form class="p-1 d-flex flex-column justify-content-center" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                        <div class="form-group p-1">
+                          <label for="exampleInputEmail1" class="p-2">Email address</label>
+                          <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          [class.valid]="loginForm.get('email')?.valid && loginForm.get('email')?.value>0"
+                          [class.invalid]="loginForm.get('email')?.invalid" 
+                          placeholder="Enter email">
+                        </div>
+                        <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)" class="alert text-danger">
+                            <div *ngIf="loginForm.controls['email'].errors">
+                            Please enter email
+                          </div>
+                        </div>
+                        <div class="form-group p-1">
+                          <label for="exampleInputPassword1" class="p-2">Password</label>
+                          <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert text-danger">
+                            <div *ngIf="loginForm.controls['password'].errors">
+                            Please enter password
+                          </div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary" style="width: 100px; margin: auto;">Log In</button>
+                    </form>
+                </div>
+              </div>
+        </div>
+        <!-- <div class="row " style="padding-top:3vh;">
+            <button type="submit" class="btn btn-outline-secondary" style="width:max-content; margin: auto;" (click)="onSignUp()">Create an account</button>
+
+        </div> -->
+
+    </div>
+
+</div>
